@@ -4,7 +4,7 @@ from azure.cognitiveservices.vision.computervision.models import OperationStatus
 import time
 import os
 
-endpoint = "https://aie-hw1.cognitiveservices.azure.com/"
+endpoint = os.environ.get('AZURE_ENDPOINT', 'default')
 key = os.environ.get('AZURE_KEY', 'default')
 
 credentials = CognitiveServicesCredentials(key)
