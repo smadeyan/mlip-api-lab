@@ -2,9 +2,10 @@ from azure.cognitiveservices.vision.computervision import ComputerVisionClient
 from msrest.authentication import CognitiveServicesCredentials
 from azure.cognitiveservices.vision.computervision.models import OperationStatusCodes
 import time
+import os
 
-endpoint = "ENTER ENDPOINT HERE"
-key = "ENTER KEY HERE"
+endpoint = "https://aie-hw1.cognitiveservices.azure.com/"
+key = os.environ.get('AZURE_KEY', 'default')
 
 credentials = CognitiveServicesCredentials(key)
 
